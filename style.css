@@ -2,15 +2,28 @@ body {
   font-family: system-ui;
   background: black;
   color: white;
-  display: flex;
   justify-content: center;
+  display: flex; /* set that to block in case if all is fucked up */
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 #container {
   text-align: center;
+  padding: 20px; /* delete that in case if all is fucked up */
+}
+
+#footer {
+  width: auto;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 10px;
 }
 
 .file-table {
@@ -21,7 +34,7 @@ body {
 
 .file-table th,
 .file-table td {
-  padding: 8px 16px;
+  padding: 4px 8px;
   text-align: center;
   border: 1px solid #ccc;
 }
@@ -43,6 +56,91 @@ body {
   border-radius: 4px;
 }
 
+.file-button2 {
+  background-color: #4800ff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.file-button-disabled {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 .file-button:hover {
   background-color: #45a049;
+}
+
+.file-button2:hover {
+  background-color: #4d17d3;
+}
+
+.file-button-disabled:hover {
+  background-color: #cb1616;
+}
+
+/* Social */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 0;
+}
+
+ .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 40px;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+   transform: translateY(-10px) scale(1.2);
+}
+
+.social-icons #discord:hover {
+  border-radius: 50%;
+  color: #002aff;
+}
+
+.social-icons #itch:hover {
+  border-radius: 50%;
+  color: #ea042b;
+}
+
+.social-icons #twitter:hover {
+  border-radius: 50%;
+  color: #006eff;
+}
+
+.social-icons #steam:hover {
+  border-radius: 50%;
+  color: #00adee;
+}
+
+.social-icons #youtube:hover {
+  border-radius: 50%;
+  color: #c4302b;
+}
+
+.social-icons #patreon:hover {
+  border-radius: 50%;
+  color: #f96854;
 }
